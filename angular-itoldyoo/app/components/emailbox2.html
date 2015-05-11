@@ -1,0 +1,22 @@
+
+  <ul class="type-ahead-container form-control" ng-click="handleFocus()">
+  <li class="type-ahead-element" ng-repeat="email in emailList">
+    <p>{{email}}</p>
+    <span class="token-input-delete-token-facebook" ng-click="handleRemoveEmail($index)">×</span>
+  </li>
+  <li class="type-ahead-element-input">
+    <input id="type-ahead-element-input-text" type="text" ng-model="search" ng-keyup="handleKeyUp($event)" ng-change="filterEmails(search,5)"  style="width: 100%">
+  </li>
+
+  </ul>
+  <div  ng-switch="items.length">
+	<div ng-switch-when="0"></div>
+	<div class="dropdown" ng-switch-default >
+		<div class="item" ng-repeat="item in items" ng-click="handleSelection(item.email)" style="cursor:pointer" ng-class="{active:isCurrent($index)}" ng-mouseenter="setCurrent($index)">
+			<div class="title">{{item.email}}</div>
+		</div>
+	</div>
+</div>
+<!--<input id="tokeninput-demo" type="text" style="display: none;">-->
+
+

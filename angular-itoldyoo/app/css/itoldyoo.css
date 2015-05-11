@@ -1,0 +1,176 @@
+.background-carousel{
+	 background-color: #556270;
+	 position: relative;
+	 padding-top: 25px;
+	 padding-right: 50px;
+    padding-bottom: 25px;
+    padding-left: 50px;
+}
+
+
+.background-header{
+	 background-color: #4ECDC4;
+	 position: relative;
+	 padding-top: 25px;
+	 padding-right: 50px;
+    padding-bottom: 25px;
+    padding-left: 50px;
+}
+
+.background-center{
+	 background-color: #C7F464;
+	 position: relative;
+	 padding-top: 25px;
+	 padding-right: 50px;
+    padding-bottom: 25px;
+    padding-left: 50px;
+}
+
+.background-footer{
+	 background-color: #FF6B6B;
+	 position: relative;
+	 padding-top: 25px;
+	 padding-right: 50px;
+    padding-bottom: 25px;
+    padding-left: 50px;
+}
+
+#slides_control > div{
+  height: 200px;
+}
+.img-carrousel{
+  margin:auto;
+  width: 400px;
+}
+#slides_control {
+  position:absolute;
+  width: 400px;
+  left:50%;
+  top:20px;
+ margin-left:-200px;
+}
+
+.loading_div{
+	display: block;
+	margin: 10px 0px;
+}
+
+/*input{
+	padding: 10px;
+	font-size: 22px;
+	margin: 20px 0 0 0;
+	border-radius: 20px;
+	border: 2px solid #C44741;
+	outline: none;
+}*/
+
+.item{
+	/*width: 250px;*/
+	margin: auto;
+	text-align: left;
+	/*margin-top: 1px;*/
+	background: #F2F2F2;
+	padding: 6px;
+	box-shadow: 0px 0px 5px #CCC;
+	/*opacity: 0.8;*/
+}
+
+.item.title{
+	font-size: 12px;
+	font-weight: bold;
+	padding-left: 2px;
+}
+
+.active{
+	background-color: #C44741;
+	color:#f2f2f2;
+}
+.dropdown {
+border-color: #ececec;
+border-width: 1px;
+border-style: solid;
+border-radius: 1px;
+min-width: 300px;
+/*padding: 6px;*/
+cursor: pointer;
+z-index: 9999;
+position: absolute;
+/*top: 32px;
+left: 0px;
+*/
+/*margin-top: -6px;*/
+background-color: #ffffff;
+}
+.switch {
+    width: 145px;
+}
+.year:hover{
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: #999999;
+    cursor: default;
+}
+
+.year{
+	border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 26px;
+    line-height: 25px;
+    margin: 1%;
+    width: 23%;
+    text-align: center;
+}
+
+.day{
+	/*border-radius: 4px;*/
+    cursor: pointer;
+    display: block;
+    /*float: left;*/
+    height: 26px;
+    line-height: 25px;
+    /*margin: 1%;*/
+    width: 14%;
+    text-align: center;
+    padding: 4px 5px;
+}
+
+
+.lg-days{
+	border: medium none;
+    border-radius: 4px;
+    height: 20px;
+    padding: 4px 5px;
+    text-align: center;
+    width: 14%;
+}
+
+.legende{
+	border: medium none;
+    border-radius: 4px;
+    height: 20px;
+    padding: 4px 5px;
+    text-align: center;
+    width: 20px;
+}
+
+.dropdowndatetime{
+z-index: 8888;
+/*width: 300px;*/
+background-color: #FFFFFF;
+position: absolute;
+background-clip: padding-box;
+   
+border: 1px solid rgba(0, 0, 0, 0.2);
+border-radius: 6px;
+box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    
+float: left;
+   
+list-style: outside none none;
+margin: 2px 0 0;
+min-width: 160px;
+padding: 5px 0;
+width: 300px;
+
+}
