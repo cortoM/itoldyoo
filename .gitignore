@@ -1,5 +1,5 @@
 /web/bundles
-!/web/bundles/itoldyoo
+!/web/bundles/itoldyoo/
 /app/bootstrap*
 /app/cache/*
 /app/logs/*
