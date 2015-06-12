@@ -1,4 +1,5 @@
-/web/bundles
+!/web/bundles
+/web/bundles/*
 !/web/bundles/itoldyoo/
 /app/bootstrap*
 /app/cache/*

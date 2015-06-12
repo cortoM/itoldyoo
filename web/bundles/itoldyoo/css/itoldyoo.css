@@ -1,0 +1,264 @@
+.background-carousel{
+	background-color: #00B4CC;
+	position: relative;
+	padding-top: 5px;
+	padding-right: 25px;
+    padding-bottom: 5px;
+    padding-left: 25px;
+}
+
+.background-header div{
+ color: #FFFFFF;
+ text-align:center;
+ padding:10px 0px;/*Marge verticale*/
+ 
+}
+
+.background-header img{
+    width:auto;
+    height:40px;
+    position : absolute;
+    padding-top: 5px;
+    left : 3%;
+    margin-left : 3px;
+}
+
+.background-header{
+	background-color: #515151;
+	position: relative;
+    height:50px;
+}
+
+.background-center{
+	background-color: #EEEEEE;
+	position: relative;
+	padding-top: 25px;
+	padding-right: 50px;
+    padding-bottom: 25px;
+    padding-left: 50px;
+}
+
+.background-footer{
+	background-color: #515151;
+	position: relative;
+	padding-top: 25px;
+	padding-right: 50px;
+    padding-bottom: 25px;
+    padding-left: 50px;
+}
+
+.background-footer a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#slides_control > div{
+    height: 200px;
+}
+.img-carrousel{
+    margin:auto;
+    width: 400px;
+}
+#slides_control {
+    position:absolute;
+    width: 400px;
+    left:50%;
+    top:20px;
+    margin-left:-200px;
+}
+
+.loading_div{
+	display: block;
+	margin: 10px 0px;
+}
+
+.type-ahead-item{
+	/*width: 250px;*/
+	margin: auto;
+	text-align: left;
+	/*margin-top: 1px;*/
+	background: #F2F2F2;
+	padding: 6px;
+	box-shadow: 0px 0px 5px #CCC;
+	/*opacity: 0.8;*/
+}
+
+.type-ahead-item-title{
+	font-size: 12px;
+	font-weight: bold;
+	padding-left: 2px;
+}
+
+.type-ahead-item-active{
+	background-color: #C44741;
+	color:#f2f2f2;
+}
+.dropdown {
+    border-color: #ececec;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 1px;
+    min-width: 300px;
+    /*padding: 6px;*/
+    cursor: pointer;
+    z-index: 9999;
+    position: absolute;
+    /*top: 32px;
+    left: 0px;
+    */
+    /*margin-top: -6px;*/
+    background-color: #ffffff;
+}
+.switch {
+    width: 145px;
+}
+.year:hover{
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: #999999;
+    cursor: default;
+}
+
+.year{
+	border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 26px;
+    line-height: 25px;
+    margin: 1%;
+    width: 23%;
+    text-align: center;
+}
+
+.day{
+	/*border-radius: 4px;*/
+    cursor: pointer;
+    display: block;
+    /*float: left;*/
+    height: 26px;
+    line-height: 25px;
+    /*margin: 1%;*/
+    width: 14%;
+    text-align: center;
+    padding: 4px 5px;
+}
+
+
+.lg-days{
+	border: medium none;
+    border-radius: 4px;
+    height: 20px;
+    padding: 4px 5px;
+    text-align: center;
+    width: 14%;
+}
+
+.legende{
+	border: medium none;
+    border-radius: 4px;
+    height: 20px;
+    padding: 4px 5px;
+    text-align: center;
+    width: 20px;
+}
+
+.dropdowndatetime{
+    z-index: 8888;
+    /*width: 300px;*/
+    background-color: #FFFFFF;
+    position: absolute;
+    background-clip: padding-box;
+       
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        
+    float: left;
+       
+    list-style: outside none none;
+    margin: 2px 0 0;
+    min-width: 160px;
+    padding: 5px 0;
+    width: 300px;
+
+}
+
+/* class for the type_ahead */
+
+p {
+    line-height: 1.5;
+    margin: 20px 0;
+}
+
+ul li, ol li {
+    line-height: 1.5;
+    margin-left: 30px;
+}
+
+/*used*/
+ul.type-ahead-container {
+    /*background-color: #fff;
+    border: 1px solid #999;*/
+    clear: left;
+    cursor: text;
+    /*font-family: Verdana;*/
+    /*font-size: 12px;*/
+    height: auto !important;
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+/*    width: 400px;*/
+    z-index: 999;
+   
+}
+
+/* used */
+ul.type-ahead-container li input {
+    background-color: white;
+    border: 0 none;
+    margin: 2px 0;
+    padding: 3px 8px;
+   /* width: 100px;*/
+}
+
+li.type-ahead-element {
+    background-color: #d0efa0;
+    color: #000;
+    cursor: default;
+    display: block;
+    font-weight: bold;
+    height: auto !important;
+    margin: 3px;
+    overflow: hidden;
+    padding: 3px 5px;
+}
+
+/*used */
+li.type-ahead-element span {
+    cursor: pointer;
+    float: right;
+}
+/*used */
+li.type-ahead-element p {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+/* used */
+ul.type-ahead-element-input li input {
+    background-color: white;
+    border: 0 none;
+    margin: 2px 0;
+    padding: 3px 8px;
+   /* width: 100px; */
+}
+
+li.type-ahead-element-input {
+    float: left;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
