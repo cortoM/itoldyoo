@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+<file source-language="en" datatype="plaintext" original="file.ext">
+<body>
+	<trans-unit id="1">
+		<source>global.application.name</source>
+		<target>IToldYoo!</target>
+	</trans-unit>
+	<!-- TYPE / CODE -->
+	<trans-unit id="100">
+		<source>code.itoldyoo-status.done</source>
+		<target>Sent</target>
+	</trans-unit>
+	<trans-unit id="101">
+		<source>code.itoldyoo-status.todo</source>
+		<target>To be sent</target>
+	</trans-unit>	
+	<trans-unit id="102">
+		<source>code.itoldyoo-status.error</source>
+		<target>Not sent due to error</target>
+	</trans-unit>
+	<trans-unit id="103">
+		<source>code.itoldyoo-status.canceled</source>
+		<target>Canceled</target>
+	</trans-unit>
+	<!-- ERROR MESSAGE-->
+	<trans-unit id="200">
+		<source>error.message.type1</source>
+		<target>unknown user</target>
+	</trans-unit>
+	<!-- COMPONENT -->
+	<trans-unit id="300">
+		<source>component.header.text1</source>
+		<target>Create your IToldYoo and share it with your friends!</target>
+	</trans-unit>
+	<trans-unit id="301">
+		<source>component.datetimepicker.label</source>
+		<target>When</target>
+	</trans-unit>
+	<trans-unit id="302">
+		<source>component.emailbox.label</source>
+		<target>@ You</target>
+	</trans-unit>
+	<trans-unit id="303">
+		<source>component.itoldyooemail.label</source>
+		<target>@ I</target>
+	</trans-unit>
+	<trans-unit id="304">
+		<source>component.itoldyoomessage.label</source>
+		<target>Told</target>
+	</trans-unit>
+	<trans-unit id="305">
+		<source>component.itoldyoo.text1</source>
+		<target>I Told Yoo!</target>
+	</trans-unit>
+
+
+</body>
+</file>
+</xliff>

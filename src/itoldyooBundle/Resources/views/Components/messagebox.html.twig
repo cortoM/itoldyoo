@@ -1,0 +1,20 @@
+<div ng-switch="type">
+	<div ng-switch-when="primary">
+		<p class="bg-primary">{% raw %}{{message}}{% endraw %}</p>
+	</div>
+		<div ng-switch-when="success">
+		<p class="bg-success">{% raw %}{{message}}{% endraw %}</p>
+	</div>
+		<div ng-switch-when="info">
+		<p class="bg-info">{% raw %}{{message}}{% endraw %}</p>
+	</div>
+		<div ng-switch-when="warning">
+		<p class="bg-warning">{% raw %}{{message}}{% endraw %}</p>
+	</div>
+	<div ng-switch-when="danger">
+		<p class="bg-danger">{% raw %}{{message}}{% endraw %}</p>
+	</div>
+	<div ng-switch-when="none">
+	</div>
+
+</div>

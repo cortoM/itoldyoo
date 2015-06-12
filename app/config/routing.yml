@@ -1,0 +1,4 @@
+itoldyoo:
+    resource: "@itoldyooBundle/Resources/config/routing.yml"
+    prefix:   /
+

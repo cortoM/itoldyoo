@@ -1,0 +1,12 @@
+<div>
+		<h5>Vos derniers IToldYoo:</h5>
+		<div ng-repeat="item in items">
+			<div>
+			{% raw %}
+				{{item.description}} - {{item.creationDate}} - {{item.status}}
+			{% endraw %}
+			</div>
+		</div>
+	
+</div>
+

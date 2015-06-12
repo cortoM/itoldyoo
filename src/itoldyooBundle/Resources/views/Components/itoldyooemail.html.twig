@@ -1,0 +1,4 @@
+<div ng-class="{true:'form-group has-success', false:'form-group has-error'}[isValid]">
+	<label class="control-label" for="inputemail">{{ "component.itoldyooemail.label"|trans }}</label>
+	<input type="text" class="form-control" id="inputemail" ng-blur="validateValues()" placeholder="my email address" ng-model="knownEmail">
+</div>

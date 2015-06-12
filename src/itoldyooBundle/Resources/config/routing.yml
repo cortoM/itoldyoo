@@ -1,0 +1,28 @@
+itoldyoo_homepage:
+    path:     /itoldyoo
+    defaults: { _controller: itoldyooBundle:IToldyoo:index }
+    methods:  [GET]
+user_getitoldyoo:
+    path:     /user/getIToldyoo
+    defaults: { _controller: itoldyooBundle:User:getIToldyoo }
+    methods:  [GET]
+user_getemails:
+    path:     /user/getEmails
+    defaults: { _controller: itoldyooBundle:User:getEmails }
+    methods:  [GET]
+user_getlastemails:
+    path:     /user/getUserLastEmail
+    defaults: { _controller: itoldyooBundle:User:getUserLastEmail }
+    methods:  [GET]
+user_createITolyoo:
+    path:     /user/createIToldyoo
+    defaults: { _controller: itoldyooBundle:User:createIToldyoo }
+    methods:  [POST]
+component_template:
+    path:     /component/getTemplate/{componentName}
+    defaults: { _controller: itoldyooBundle:Component:getTemplate }
+    methods:  [GET]
+test_hello:
+    path:     /hello/{name}
+    defaults: { _controller: itoldyooBundle:Hello:index }
+    methods:  [GET]

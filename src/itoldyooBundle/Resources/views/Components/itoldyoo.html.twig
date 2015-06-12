@@ -1,0 +1,49 @@
+<div ng-switch="mode">
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-6">
+			<messagebox></messagebox>
+		</div>
+		<div class="col-md-3"></div>
+	</div>
+	<div ng-switch-when="view">
+		<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+				Poster votre Itoldyou:
+				<div class="input-group">
+					<input type="text" class="form-control" ng-model="inputitoldyoo" placeholder="my bet!">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="button" ng-click="handleNewIToldYoo(inputitoldyoo)">{{ "component.itoldyoo.text1"|trans }}</button>
+					</span>
+				</div>
+				
+			</div>
+			<div class="col-md-3"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-6">		
+				<myitoldyoo item="item"></myitoldyoo>
+			</div>
+			<div class="col-md-3"></div>
+		</div>
+	</div>
+	<div ng-switch-when="creation">
+	    
+		<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+
+				<itoldyooemail></itoldyooemail>
+				<itoldyoomessage message="inputitoldyoo2"></itoldyoomessage>
+		        <emailbox prompt="email addresses" /></emailbox>
+		      	<whenpicker prompt="When it will happen?"> </whenpicker>
+
+			<br>
+			<button class="btn btn-default" type="button" ng-click="handleCreateIToldYoo()">Validate</button>
+			</div>
+	     <div class="col-md-3"></div>
+	   
+	</div>
+</div>

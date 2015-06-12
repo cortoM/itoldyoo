@@ -1,0 +1,13 @@
+services:
+ auth_service:
+  class: itoldyooBundle\Business\Service\AuthorisationService
+  arguments: [ "@user_service" ]
+ user_service: 
+  class: itoldyooBundle\Business\Service\UserService
+  arguments: [ "@doctrine.orm.entity_manager" ]
+ itoldyoo_service: 
+  class: itoldyooBundle\Business\Service\IToldyooService
+  arguments: [ "@doctrine.orm.entity_manager"]  
+#    itoldyoo.example:
+#        class: itoldyooBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

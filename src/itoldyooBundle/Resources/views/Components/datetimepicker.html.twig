@@ -1,0 +1,85 @@
+<div ng-class="{true:'form-group has-success', false:'form-group has-error'}[isValid]">
+   	<label for="when">{{ "component.datetimepicker.label"|trans }}</label>
+	<div>
+		<a class="dropdown-toggle btn btn-default" ng-click="handleChangeDateTime()">{% raw %}{{finalDate|date}}{% endraw %}</a>
+		<div ng-switch="template">
+			
+			<div ng-switch-when="year" class="dropdowndatetime">
+				<table>
+					<thead>
+						<tr>
+							<th ng-click="move(-1)" class="legende">&lsaquo;</th>
+							<th colspan="5" class="switch legende">{% raw %}{{years[0].getFullYear()}}-{{years[years.length-1].getFullYear()}}{% endraw %}</th>
+							<th ng-click="move(1)" class="legende">&rsaquo;</i></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="7">
+							<span ng-repeat="year in years" class="year" ng-click="setSelectedDate(year, template)" ng-bind="year.getFullYear()"> </span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div ng-switch-when="month" class="dropdowndatetime">
+				<table>
+					<thead>
+						<tr>
+							<th ng-click="move(-1)" class="legende">&lsaquo;</th>
+							<th colspan="5" class="switch legende" ng-click="setDateTimeView('year')">{% raw %}{{displayedDate.getFullYear()}}{% endraw %}</th>
+							<th ng-click="move(1)" class="legende">&rsaquo;</i></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="7">
+							<span ng-repeat="month in months" class="year" ng-click="setSelectedDate(month, template)" ng-bind="month|date:'MMM'"> </span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div ng-switch-when="day" class="dropdowndatetime">
+				<table>
+					<thead>
+						<tr>
+							<th ng-click="move(-1)" class="legende">‹</th>
+							<th class="switch legende" ng-click="setDateTimeView('month')" colspan="5">{% raw %}{{displayedDate|date:"yyyy MMMM"}}{% endraw %}</th>
+							<th ng-click="move(1)" class="legende">›</th>
+						</tr>
+						<tr>
+							<th ng-repeat="day in days" class="lg-days">{% raw %}{{ day|date:"EEE" }}{% endraw %}</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="week in weeks">
+							<td ng-repeat="day in week">
+								<span ng-click="setSelectedDate(day, template)" ng-bind="day.getDate()" class="day"></span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div ng-switch-when="hour" class="dropdowndatetime">
+				 <table>
+					<thead>
+						<tr>
+							<th ng-click="move(-24)" class="legende">&lsaquo;</th>
+							<th colspan="5" class="switch legende" ng-click="setDateTimeView('day')">{% raw %}{{ displayedDate|date:"dd MMMM yyyy" }}{% endraw %}</th>
+							<th ng-click="move(24)" class="legende">&rsaquo;</i></th>
+							</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="7">
+							<span ng-repeat="hour in hours"	ng-click="setSelectedDate(hour, template)" ng-bind="hour|time" class="year"></span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+	</div>
+</div>

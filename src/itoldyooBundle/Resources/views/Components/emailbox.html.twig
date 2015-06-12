@@ -1,0 +1,24 @@
+<div ng-class="{true:'form-group has-success', false:'form-group has-error'}[isValid]">
+  <label for="inputemails">{{ "component.emailbox.label"|trans }}</label>
+  <ul class="type-ahead-container form-control" ng-click="handleFocus()">
+  <li class="type-ahead-element" ng-repeat="email in emailList">
+    <p>{% raw %}{{email}}{% endraw %}</p>
+    <span class="token-input-delete-token-facebook" ng-click="handleRemoveEmail($index)">×</span>
+  </li>
+  <li class="type-ahead-element-input">
+    <input id="type-ahead-element-input-text" type="text" ng-model="search" ng-keyup="handleKeyUp($event)" ng-change="filterEmails(search,5)" style="width: 100%" ng-blur="validateValues()">
+  </li>
+
+  </ul>
+  <div  ng-switch="items.length">
+	<div ng-switch-when="0"></div>
+	<div class="dropdown" ng-switch-default >
+		<div class="type-ahead-item" ng-repeat="item in items" ng-click="handleSelection(item)" style="cursor:pointer" ng-class="{true:'type-ahead-item-active', false:''}[isCurrent($index)]" ng-mouseenter="setCurrent($index)">
+			<div class="type-ahead-item-title">{% raw %}{{item}}{% endraw %}</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+
