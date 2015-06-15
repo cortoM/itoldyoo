@@ -262,3 +262,10 @@ li.type-ahead-element-input {
     padding: 0;
 }
 
+.carousel {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    text-align: center;
+    width: 700px;
+}

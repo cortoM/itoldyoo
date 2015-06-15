@@ -597,24 +597,13 @@ iToldYooComponents.directive('carrousel', function() {
 		templateUrl: 'component/getTemplate/carrousel',
 		replace: true,
 		scope: { item : '=item'},
+		link: function(scope){
+			scope.carousel = $(".carousel").carousel(
+				{interval: 2000}
+			);
+	      	scope.carousel.carousel('cycle');	
+      	},
    		controller: function($scope) {
-
-			$scope.myInterval = 3000;
-			$scope.slides = [
-			    {
-			      image: 'http://lorempixel.com/400/200/'
-			    },
-			    {
-			      image: 'http://lorempixel.com/400/200/food'
-			    },
-			    {
-			      image: 'http://lorempixel.com/400/200/sports'
-			    },
-			    {
-			      image: 'http://lorempixel.com/400/200/people'
-			    }
-		  	];
-
 		}
 	};
 });
