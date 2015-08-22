@@ -55,9 +55,11 @@ class UserController extends Controller
 
 					$iToldyooDTO = new IToldyooDTO();
 					$iToldyooDTO->setDescription($itoldyoo->getDescription());
-					if (!empty($itoldyoo->getCreationDate())) 
+					$tmpCreationDate = $itoldyoo->getCreationDate();
+					if (!empty($tmpCreationDate)) 
 						$iToldyooDTO->setCreationDate($itoldyoo->getCreationDate()->format('Y-m-d H:i:s'));
-					if (!empty($itoldyoo->getScheduledDate())) 
+					$tmpScheduledDate = $itoldyoo->getScheduledDate();
+					if (!empty($tmpScheduledDate)) 
 						$iToldyooDTO->setScheduledDate($itoldyoo->getScheduledDate()->format('Y-m-d H:i:s'));
 					$statusTranslation = $t->trans(IToldyooStatus::getTextKey($itoldyoo->getStatus()));
 					$iToldyooDTO->setStatus($statusTranslation);
