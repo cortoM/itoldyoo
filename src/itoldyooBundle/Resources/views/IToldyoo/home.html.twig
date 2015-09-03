@@ -1,18 +1,24 @@
 {% extends 'itoldyooBundle::itoldyoo.html.twig' %}
 
 {% block body %}
+	
+	<div ng-controller="mainController">
 
-	<itoldyooheader> </itoldyooheader>
+		<itoldyooheader> </itoldyooheader>
+		
+	
 
-	<div class="background-carousel">
-		<carrousel> </carrousel>
-	</div>
+		<!--<div ng-if="!mobile" class="background-carousel">-->
+		<div class="background-carousel">
+			<carrousel> </carrousel>
+		</div>
 
-	<div class="background-center" >
-	    <itoldyoo ></itoldyoo>
-	</div>
+		<div class="background-center" >
+		    <itoldyoo ></itoldyoo>
+		</div>
 
-	<itoldyoofooter></itoldyoofooter> 
-
+		<itoldyoofooter></itoldyoofooter> 
+	
+	<div>
 
 {% endblock %}

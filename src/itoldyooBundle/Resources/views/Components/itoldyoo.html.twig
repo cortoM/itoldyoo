@@ -38,8 +38,12 @@
 				<itoldyooemail></itoldyooemail>
 				<itoldyoomessage message="inputitoldyoo2"></itoldyoomessage>
 		        <emailbox prompt="email addresses" /></emailbox>
-		      	<whenpicker prompt="When it will happen?"> </whenpicker>
-
+		       	<div ng-if="displayPicker">
+	      			<whenpicker prompt="When it will happen?"> </whenpicker>
+		      	</div>
+		      	<div ng-if="!displayPicker">
+		      		<datetimemobile prompt="When it will happen?"> </datetimemobile>
+				</div>
 			<br>
 			<button class="btn btn-default" type="button" ng-click="handleCreateIToldYoo()">Validate</button>
 			</div>
