@@ -144,6 +144,63 @@ iToldYooComponents.directive('whenpicker', function() {
 	};
 });   
 
+iToldYooComponents.directive('datetimemobile', function($timeout) {
+	var componentName = "datetimemobile";
+
+    return {
+		restrict: 'E',
+		transclude: true,
+		templateUrl: 'component/getTemplate/'+ componentName,
+		scope: { 
+				prompt:'@',
+		},
+		link: function(scope){
+   			var result = {"component" : componentName};
+   			scope.$emit('itoldyoo-loaded-response', result);		
+		},
+   		controller: function($rootScope, $scope, dateTimeHelper) {
+   			//$scope.myDate = $scope.prompt;
+
+			$scope.$on('itoldyoo-loaded-request', function(event, args) {
+				var result = {"component" : componentName};
+			});
+
+			$scope.$on('itoldyoo-save-request', function(event, args) {
+				var result = $scope.validateValues();
+				$scope.$emit('itoldyoo-save-response', result);
+			});
+
+			$scope.validateValues = function(){
+
+				if ((typeof $scope.myDate == 'undefined') || ($scope.myDate == null)){
+					var result = {"valid" : false,
+						"component" : componentName};
+					$scope.isValid = false;
+					return result;	
+				}
+				else if ((typeof $scope.myTime == 'undefined') || ($scope.myTime == null)){
+					var result = {"valid" : false,
+						"component" : componentName};
+					$scope.isValid = false;
+					return result;	
+				}
+				else{
+					var datetime = new Date($scope.myDate);
+					datetime.setHours($scope.myTime.getHours());
+					datetime.setMinutes($scope.myTime.getMinutes());
+					datetime.setSeconds($scope.myTime.getSeconds());
+
+					var result = {"valid" : true,
+						"date" : datetime,
+						"component" : componentName};
+					$scope.isValid = true;
+					return result;
+				}
+			}
+		}
+	}
+});
+
 iToldYooComponents.directive('emailbox', function($timeout) {
 	 // keyboard events
 	var KEY_UP = 38;
@@ -307,6 +364,9 @@ iToldYooComponents.directive('emailbox', function($timeout) {
 			if (data.code == 200){
 				$scope.master = angular.copy(data.emails);
             }
+            else if(data.code == 400){
+            	$scope.master = [];
+            }
     	})
     	.error(function (data, status, headers, config) {
         	$scope.data = data;
@@ -460,7 +520,7 @@ iToldYooComponents.directive('itoldyoo', function() {
 		link: function(scope){
    			
 		},
-   		controller: function($scope, itemRessource) {
+   		controller: function($scope, itemRessource, $window) {
    			
    			//remote components
 			$scope.$on('itoldyoo-loaded-response', function(event, args) {
@@ -493,7 +553,9 @@ iToldYooComponents.directive('itoldyoo', function() {
 						else if ($scope.childComponentValues[i].component == 'whenpicker'){
 							scheduledDate = $scope.childComponentValues[i].date.toUTCString();
 						}
-
+						else if ($scope.childComponentValues[i].component == 'datetimemobile'){
+							scheduledDate = $scope.childComponentValues[i].date.toUTCString();
+						}
 					}
 					var tmp = {description:description, email:email,scheduledDate:scheduledDate,emails:emails };
 					var finalJSON = JSON.stringify(tmp);
@@ -518,6 +580,45 @@ iToldYooComponents.directive('itoldyoo', function() {
 
 				}
 			});
+			
+		    $scope.isMobile = function(){
+		      var screenWidth = $window.innerWidth;
+		      if (screenWidth < 768) {
+		        return true;
+		      }
+		      return false;
+		    }
+		    $scope.isDateTimeSupported = function(){
+				var supported = {
+					date: false,
+					time: false,
+				};
+				var tester = document.createElement('input');
+				
+				for (var i in supported) {
+					tester.type = i;
+					tester.value = ':(';
+
+				  if (tester.type === i && tester.value === '') {
+				    supported[i] = true;
+				  }
+				  else{
+				    return false;
+				  }
+				}
+				return true;
+		    }
+
+		    $scope.isDisplayPicker = function(){
+
+		    	if (($scope.isDateTimeSupported()) && ($scope.isMobile())){
+			    	return false;
+				}
+				else{
+					return true;
+				}
+		    }
+		    $scope.displayPicker = $scope.isDisplayPicker();
 
 			$scope.initModeView = function(){
 				$scope.childComponents = [];

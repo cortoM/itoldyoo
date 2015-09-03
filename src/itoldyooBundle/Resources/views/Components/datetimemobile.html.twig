@@ -1,0 +1,12 @@
+<div ng-class="{true:'form-group has-success', false:'form-group has-error'}[isValid]">
+	<label for="when">{{ "component.datetimepicker.label"|trans }}</label>
+	<div class="row">
+		<div class="col-md-6">	
+			<input type="date" class="form-control" id="whendate" ng-blur="validateValues()" ng-model="myDate" placeholder="yyyy-MM-dd">
+		</div>
+		<div class="col-md-6">	
+			<input type="time" class="form-control" id="whentime" ng-blur="validateValues()" ng-model="myTime" placeholder="HH:mm:ss">
+		</div>
+
+	</div>
+</div>
