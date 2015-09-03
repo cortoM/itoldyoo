@@ -1,6 +1,6 @@
 .background-carousel{
 	background-color: #00B4CC;
-	position: relative;
+	/*position: relative;*/
 	padding-top: 5px;
 	padding-right: 25px;
     padding-bottom: 5px;
@@ -260,6 +260,7 @@ li.type-ahead-element-input {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 .carousel {
@@ -267,5 +268,9 @@ li.type-ahead-element-input {
     margin-right: auto;
     position: relative;
     text-align: center;
-    width: 700px;
+    /*width: 700px;*/
+}
+
+.carousel-inner > .item > img {
+    margin: 0 auto;
 }
